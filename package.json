@@ -8,7 +8,7 @@
     "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "build:js": "eslint --fix ./src/js/*.js && babel src -d dist && uglifyjs dist/js/*.js --compress --mangle --output dist/js/*.js",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run build:js",
-    "start": "browser-sync -s -f \"./index.html, dist/**/*\"",
+    "start": "browser-sync -s -f \"./index.html, ./dist/**/*\"",
     "watch:all": "concurrently \"npm start\" \"npm run watch:scss\""
   },
   "repository": {
