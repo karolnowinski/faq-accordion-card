@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
-    "watch:scss": "onchange -i -v \"/src/styles/*.scss\" -- npm run build:scss",
+    "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "build:js": "eslint --fix ./src/js/*.js && babel src -d dist && uglifyjs dist/js/*.js --compress --mangle --output dist/js/*.js",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run build:js",
     "start": "browser-sync -s -f \"./index.html, dist/**/*\"",
@@ -17,6 +17,10 @@
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karolnowinski/faq-accordion-card/issues"
+  },
+  "homepage": "https://github.com/karolnowinski/faq-accordion-card#readme",
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.14",
@@ -25,11 +29,7 @@
     "concurrently": "^6.0.0",
     "eslint": "^7.23.0",
     "node-sass": "^5.0.0",
-    "onchange": "^7.1.0",
+    "onchange": "^6.1.0",
     "uglify-js": "^3.13.3"
-  },
-  "bugs": {
-    "url": "https://github.com/karolnowinski/faq-accordion-card/issues"
-  },
-  "homepage": "https://github.com/karolnowinski/faq-accordion-card#readme"
+  }
 }
