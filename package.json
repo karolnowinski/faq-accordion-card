@@ -9,7 +9,7 @@
     "build:js": "eslint --fix ./src/js/*.js && babel src -d dist && uglifyjs dist/js/*.js --compress --mangle --output dist/js/*.js",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run build:js",
     "start": "browser-sync -s -f \"./index.html, dist/**/*\"",
-    "watch:all": "concurrently \"npm start\" \"npm run watch:scss\""
+    "watch:all": "concurrently \"npm start\" \"npm run watch:scss\" \"npm run watch:js\""
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "@babel/preset-env": "^7.13.12",
     "browser-sync": "^2.26.14",
     "concurrently": "^6.0.0",
-    "eslint": "^7.23.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "node-sass": "^5.0.0",
     "onchange": "^6.1.0",
     "uglify-js": "^3.13.3"

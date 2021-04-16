@@ -1,0 +1,1 @@
+const questions=document.querySelectorAll(".card__item");function disableAll(){questions.forEach(e=>{e.open=!1})}questions.forEach(e=>e.addEventListener("focusin",()=>{disableAll(),e.open=!0}));
